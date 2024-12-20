@@ -1,0 +1,110 @@
+def calculator():
+    print("Select operation:")
+    print("1. Add")
+    print("2. Subtract")
+    print("3. Multiply")
+    print("4. Divide")
+
+    choice = input("Enter choice (1/2/3/4): ")
+
+    num1 = float(input("Enter first number: "))
+    num2 = float(input("Enter second number: "))
+
+    if choice == '1':
+        print(f"{num1} + {num2} = {num1 + num2}")
+    elif choice == '2':
+        print(f"{num1} - {num2} = {num1 - num2}")
+    elif choice == '3':
+        print(f"{num1} * {num2} = {num1 * num2}")
+    elif choice == '4':
+        if num2 == 0:
+            print("Cannot divide by zero.")
+        else:
+            print(f"{num1} / {num2} = {num1 / num2}")
+    else:
+        print("Invalid input")
+
+calculator()
+3. Palindrome Checker
+A program to check whether a given string is a palindrome (reads the same forward and backward).
+
+python
+Copy code
+def is_palindrome(string):
+    return string == string[::-1]
+
+input_string = input("Enter a string: ")
+if is_palindrome(input_string):
+    print(f"{input_string} is a palindrome.")
+else:
+    print(f"{input_string} is not a palindrome.")
+4. Fibonacci Sequence
+This program generates the Fibonacci sequence up to a certain number of terms.
+
+python
+Copy code
+def fibonacci(n):
+    sequence = [0, 1]
+    for i in range(2, n):
+        sequence.append(sequence[i-1] + sequence[i-2])
+    return sequence
+
+n_terms = int(input("Enter the number of terms in the Fibonacci sequence: "))
+print(fibonacci(n_terms))
+5. Prime Number Checker
+A program that checks if a number is prime.
+
+python
+Copy code
+def is_prime(num):
+    if num <= 1:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+num = int(input("Enter a number: "))
+if is_prime(num):
+    print(f"{num} is a prime number.")
+else:
+    print(f"{num} is not a prime number.")
+6. Factorial Program
+A program to calculate the factorial of a number.
+
+python
+Copy code
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+num = int(input("Enter a number to find its factorial: "))
+print(f"Factorial of {num} is {factorial(num)}")
+7. Sum of Digits
+This program calculates the sum of the digits of a number.
+
+python
+Copy code
+def sum_of_digits(n):
+    return sum(int(digit) for digit in str(n))
+
+num = int(input("Enter a number: "))
+print(f"Sum of digits of {num} is {sum_of_digits(num)}")
+8. Temperature Conversion (Celsius to Fahrenheit)
+This program converts temperature from Celsius to Fahrenheit.
+
+python
+Copy code
+def celsius_to_fahrenheit(celsius):
+    return (celsius * 9/5) + 32
+
+celsius = float(input("Enter temperature in Celsius: "))
+fahrenheit = celsius_to_fahrenheit(celsius)
+print(f"{celsius}°C is equal to {fahrenheit}°F.")
+Let me know if you'd like more examples or a different type of Python program!
+
+
+
+
